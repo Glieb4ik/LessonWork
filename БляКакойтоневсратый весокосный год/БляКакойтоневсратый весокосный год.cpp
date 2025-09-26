@@ -45,49 +45,87 @@ using namespace std;
 //	}
 //}
 
-void printRectangle(int width, int height, char sym) {
-	for (int i = 0; i < height; i++) {
-		for (int j = 0; j < width; j++) {
-			if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
-				cout << sym;
-			}
-			else cout << " ";
-		}
-		cout << endl;
-	}
-}
+//void printRectangle(int width, int height, char sym) {
+//	for (int i = 0; i < height; i++) {
+//		for (int j = 0; j < width; j++) {
+//			if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+//				cout << sym;
+//			}
+//			else cout << " ";
+//		}
+//		cout << endl;
+//	}
+//}
+//
+//int main() {
+//
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//
+//	int height, width, color;
+//	char sym;
+//
+//	cout << "Высота: ";
+//	cin >> height;
+//	cout << "Ширина: ";
+//	cin >> width;
+//	cout << "Символ: ";
+//	cin >> sym;
+//	cout << "Цвет (1-3): ";
+//	cin >> color;
+//
+//	switch (color) {
+//	case 1:
+//		cout << "\033[0;32m";
+//		break;
+//	case 2:
+//		cout << "\033[0;31m";
+//		break;
+//	case 3:
+//		cout << "\033[0;34m";
+//		break;
+//	default:
+//		cout << "Обломчик, такой циферки нету";
+//	}
+//
+//	printRectangle(width, height, sym);
+//
+//	return 0;
+//}
 
-int main() {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
 
-	int height, width, color;
-	char sym;
-
-	cout << "Высота: ";
-	cin >> height;
-	cout << "Ширина: ";
-	cin >> width;
-	cout << "Символ: ";
-	cin >> sym;
-	cout << "Цвет (1-3): ";
-	cin >> color;
-
-	switch (color) {
-	case 1:
-		cout << "\033[0;32m";
-		break;
-	case 2:
-		cout << "\033[0;31m";
-		break;
-	case 3:
-		cout << "\033[0;34m";
-		break;
-	default:
-		cout << "Обломчик, такой циферки нету";
-	}
-
-	printRectangle(width, height, sym);
-
-	return 0;
-}
+//int main () {
+//
+//	SetConsoleCP(1251);
+//	SetConsoleOutputCP(1251);
+//
+//	srand((time(0)));
+//
+//	int numbers[5];
+//	for (int i = 0; i < 5; i++) { // 5 раз заполняем массив рандом числом
+//		numbers[i] = rand() % 100;
+//	}
+//
+//	cout << "Масив: ";
+//	for (int i = 0; i < 5; i++) { // 5 раз выводим число и пробел
+//		cout << numbers[i] << " ";
+//	}
+//
+//	int max = numbers[0];
+//	int min = numbers[0];
+//
+//	for (int i = 0; i < 5; i++) { // ищем макс и мин число
+//		if (numbers[i] > max) {
+//			max = numbers[i];
+//		}
+//		if (numbers[i] < min) {
+//			min = numbers[i];
+//		}
+//	}
+//
+//	cout << "Максимальное число: " << max << endl;
+//	cout << "Минимальное число: " << min << endl;
+//
+//	return 0;
+//}
+//
