@@ -58,39 +58,36 @@ void printRectangle(int width, int height, char sym) {
 }
 
 int main() {
-
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	int height, weight, sym, color;
+	int height, width, color;
+	char sym;
 
-	cout << "Висота: ";
+	cout << "Высота: ";
 	cin >> height;
 	cout << "Ширина: ";
-	cin >> weight;
+	cin >> width;
 	cout << "Символ: ";
 	cin >> sym;
-	cout << "Колір: ";
+	cout << "Цвет (1-3): ";
 	cin >> color;
 
-	// Color
+	switch (color) {
+	case 1:
+		cout << "\033[0;32m";
+		break;
+	case 2:
+		cout << "\033[0;31m";
+		break;
+	case 3:
+		cout << "\033[0;34m";
+		break;
+	default:
+		cout << "Обломчик, такой циферки нету";
+	}
 
-	if (color == 1) {
-		        cout << "\033[0;32mЦвета:\n1 - Зеленый\n2 - Красный\n3 - Синий\n\033[0m";
-			}
-			else if (color == 2) {
-				cout << "\033[0;31mЦвета:\n1 - Зеленый\n2 - Красный\n3 - Синий\n\031[0m";
-			}
-		    else if (color == 3) {
-				cout << "\033[0;34mЦвета:\n1 - Зеленый\n2 - Красный\n3 - Синий\n\034[0m";
-		    }
-			else {
-				cout << "Неизвестный цвет";
-			}
-
-
-	printRectangle(weight, height, sym);
+	printRectangle(width, height, sym);
 
 	return 0;
-	
 }
